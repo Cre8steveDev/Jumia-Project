@@ -24,9 +24,9 @@ body {
 /* TOP HEADER */
 
 .top-header {
-  background-color: #f1f1f2;
+  background-color: green;
   p {
-    color: #e07e1b;
+    color: white;
     font-size: 14px;
   }
 }
