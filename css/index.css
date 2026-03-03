@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Global selectors */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+.max-container {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+body {
+  background-image: url("/Images/jumia-2026-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* TOP HEADER */
+
+.top-header {
+  background-color: #f1f1f2;
+  p {
+    color: #e07e1b;
+    font-size: 14px;
+  }
+}
+
+header {
+  img {
+    width: 130px;
+  }
+  padding: 5px;
+  background-color: white;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+/* search box */
+
+.Search-box {
+  button {
+    padding: 10px 14px;
+
+    border: none;
+    background-color: #e07e1b;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+  }
+  input {
+    padding: 7px;
+    width: 350px;
+    border-radius: 2px;
+    border: gray;
+    outline: 1px solid gray;
+  }
+  margin-top: 5px;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  padding-top: 5px;
+
+  a {
+    text-decoration: none;
+  }
+}
+/* HERO CONTAINER */
+
+.hero-container {
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  gap: 15px;
+  margin-inline: auto;
+  justify-content: center;
+}
+
+.Lists-container {
+  color: gray;
+  width: 20%;
+  color: #666668;
+  max-width: 250px;
+  min-width: 250px;
+  background-color: white;
+  border-radius: 2px;
+  padding: 10px 10px;
+  list-style-type: none;
+  li {
+    margin-bottom: 15px;
+  }
+}
+
+.hero-image {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+
+/* Categories-card List */
+
+.categories-cards-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 13px;
+  background-color: white;
+  padding: 10px 10px;
+  color: #666668;
+}
+
+.categories-card {
+  img {
+    width: 100%;
+  }
+}
+/* .categories-card:hover {
+  scale: 0.9;
+} */
+
+.flash-sale-header {
+  margin-top: 20px;
+  background-color: #e61601;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  color: white;
+
+  a {
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.flash-sales-categories {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background-color: white;
+  font-size: 14px;
+  color: #666668;
+}
+
+.Flash-sales-images {
+  padding: 15px 15px;
+  img {
+    width: 100%;
+  }
+  p {
+    padding-right: 5px;
+  }
+}
+
+.middle-image-container {
+  background-color: white;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 10px 10px;
+}
+
+.middle-image {
+  img {
+    width: 100%;
+  }
+}
+/* 
+.middle-image:hover {
+  scale: 0.9;
+} */
+
+/* MEDIA QUERIES FOR TABLETS */
+
+@media screen and (max-width: 960px) {
+  .top-header {
+    padding: 10px;
+  }
+
+  header {
+    padding: 10px;
+    padding-inline: 20px;
+  }
+
+  nav {
+    display: none !important;
+  }
+
+  .Search-box {
+    input {
+      width: 200px;
+    }
+  }
+
+  .hero-container {
+    flex-direction: column;
+    padding-inline: 20px;
+  }
+
+  .Lists-container {
+    display: none;
+  }
+
+  .categories-cards-list {
+    width: 95%;
+    font-size: 14px;
+  }
+
+  .flash-sale-header {
+    width: 95%;
+  }
+
+  .flash-sales-categories {
+    width: 95%;
+  }
+
+  .middle-image-container {
+    width: 95%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: center;
+  }
+}
+
+/* MEDIA QUERIES FOR MOBILE */
+@media screen and (max-width: 480px) {
+  .top-header {
+    display: none;
+  }
+
+  header {
+    position: sticky;
+    top: 0px;
+    align-items: center;
+
+    img {
+      width: 70px !important;
+    }
+  }
+
+  .Search-box input {
+    width: 100px;
+  }
+
+  .Search-box button {
+    padding-inline: 8px !important;
+  }
+
+  .categories-cards-list {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    font-size: 14px;
+  }
+  .flash-sale-header {
+    font-size: 14px !important;
+  }
+
+  .flash-sales-categories {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .middle-image-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
